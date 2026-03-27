@@ -1,0 +1,200 @@
+<template>
+  <section class="wine-page">
+    <div class="wine-card">
+      <!-- LEFT: bottle -->
+      <div class="wine-left fade-in">
+        <div class="splash-container">
+          <img src="/images/belo.png" alt="White Wine Splash" class="splash" />
+          <img src="/images/temjanika.png" alt="Temjanika Wine Bottle" class="bottle" />
+        </div>
+      </div>
+
+      <!-- RIGHT: text -->
+      <div class="wine-right fade-up">
+        <div class="info-box">
+          <h1 class="wine-title">
+            Temjanika <span class="ultima">Ultima</span>
+          </h1>
+
+          <p class="subtitle">White Aromatic Wine</p>
+          <hr class="divider" />
+
+          <p class="story">
+            Our white aromatic wine is crafted from <strong>Temjanika</strong> grapes grown in our own
+            vineyards in  <span class="highlight">Čakovec</span> and
+            <span class="highlight">Laktite</span>, near the village of Resava.
+          </p>
+
+          <div class="details">
+            <p><strong>Volume:</strong> 0.75 L</p>
+            <p><strong>Price:</strong> €10</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup></script>
+
+<style scoped>
+.wine-page {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+/* === layout === */
+.wine-card {
+  display: flex;
+  gap: 6rem;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1300px;
+  width: 100%;
+}
+
+/* === bottle side === */
+.splash-container {
+  position: relative;
+  width: 450px;
+  height: 760px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.splash {
+  position: absolute;
+  bottom: 100px;
+  width: 140%;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.bottle {
+  position: relative;
+  width: 330px;
+  z-index: 2;
+  margin-top: 88px;
+  transition: transform 0.6s ease;
+}
+.bottle:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+/* === text side === */
+.wine-right {
+  position: relative;
+  width: 500px;
+  height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("/images/whiteG.jpg") center/cover no-repeat;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 50px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* dark overlay */
+.wine-right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75));
+  z-index: 0;
+}
+
+/* ✅ FIX: same positioning vibe as rose */
+.info-box {
+  position: relative;
+  z-index: 1;
+  width: 85%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;   /* ✅ no more stretching */
+  padding: 70px 50px 10px;       /* ✅ pushes title lower like rose */
+  color: #ffffff;
+  text-align: left;
+}
+
+/* === title === */
+.wine-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  text-transform: capitalize;
+  text-shadow:
+    0 4px 10px rgba(210, 170, 90, 0.45),
+    0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.wine-title .ultima {
+  color: #e6c77a;
+  font-style: italic;
+  font-weight: 500;
+  text-shadow:
+    0 0 6px rgba(230, 199, 122, 0.6),
+    0 0 14px rgba(210, 170, 90, 0.45);
+}
+
+/* === subtitle === */
+.subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  color: #f0e8c2;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* === divider === */
+.divider {
+  width: 60px;
+  height: 2px;
+  border: none;
+  background: linear-gradient(90deg, #c4a676, #f0dcb3);
+  margin-bottom: 15px;
+}
+
+/* ✅ FIX: story without dark box (like rose) */
+.story {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #f8f8f8;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  max-width: 420px;
+}
+
+.story strong {
+  color: #f5e9b9;
+}
+.story .highlight {
+  font-style: italic;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* === details === */
+.details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-top: 10px;
+}
+</style>
