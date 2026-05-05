@@ -1,7 +1,7 @@
 <template> 
   <div id="app">
     <HeaderSection />
-    
+    <h1>{{ $t('nav.home') }}</h1>
     <main>
       <!-- Homepage -->
       <template v-if="$route.path === '/'">

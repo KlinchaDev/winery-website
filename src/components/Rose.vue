@@ -18,8 +18,8 @@
           <hr class="divider" />
 
           <p class="story">
-           Enjoy and toast with Moma Resavka, our rosé wine
-          from our indigenous Stanushina variety, which will captivate you with the fruity scent of red fruit and delicate floral aromas.
+            Enjoy and toast with Moma Resavka, our rosé wine
+            from our indigenous Stanushina variety, which will captivate you with the fruity scent of red fruit and delicate floral aromas.
           </p>
 
           <div class="details">
@@ -42,7 +42,8 @@
   justify-content: center;
   min-height: 100vh;
   overflow: hidden;
-  padding: 60px 0;
+  padding: 60px 20px;
+  box-sizing: border-box;
 }
 
 /* === layout === */
@@ -56,6 +57,10 @@
 }
 
 /* === bottle side === */
+.wine-left {
+  flex: 0 0 auto;
+}
+
 .splash-container {
   position: relative;
   width: 350px;
@@ -85,15 +90,16 @@
   transition: transform 0.6s ease;
   margin-top: -9px;
 }
+
 .bottle:hover {
   transform: scale(1.05) translateY(-5px);
 }
 
-/* === text side (keep same background image) === */
+/* === text side === */
 .wine-right {
   position: relative;
   width: 500px;
-  height: 620px;
+  min-height: 620px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,7 +109,6 @@
   box-shadow: 0 50px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* overlay */
 .wine-right::before {
   content: "";
   position: absolute;
@@ -116,7 +121,7 @@
   z-index: 0;
 }
 
-/* === info box (rakija-like spacing) === */
+/* === info box === */
 .info-box {
   position: relative;
   z-index: 1;
@@ -125,13 +130,15 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 100px 50px 10px;
+  padding: 100px 50px 40px;
   color: #ffffff;
   text-align: left;
+  box-sizing: border-box;
 }
 
-/* === title (same style as rakija.vue) === */
+/* === title === */
 .wine-title {
+  position: relative;
   font-family: "Cormorant Garamond", serif;
   font-size: 3rem;
   font-weight: 600;
@@ -174,24 +181,21 @@
   margin-bottom: 15px;
 }
 
-/* === story (rakija-like, without big card feel) === */
-/* === story (fixed positioning only) === */
+/* === story === */
 .story {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.05rem;
   line-height: 1.85;
   color: #f8f8f8;
-
-  /* 👇 POPRAVEK POZICIJE */
-  margin-top: 18px;        /* spusti paragraf malo dol */
+  margin-top: 18px;
   margin-bottom: 18px;
-  max-width: 420px;        /* lepša berljivost */
+  max-width: 420px;
 }
-
 
 .story strong {
   color: #ffe5e5;
 }
+
 .story .highlight {
   color: #ffffff;
   font-style: italic;
@@ -202,17 +206,20 @@
 .details {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
   width: 100%;
   font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
   color: #ffffff;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 /* === animations === */
 .fade-in {
   animation: fadeIn 1.2s ease forwards;
 }
+
 .fade-up {
   animation: fadeUp 1.4s ease forwards;
 }
@@ -221,8 +228,231 @@
   from { opacity: 0; transform: translateX(-30px); }
   to   { opacity: 1; transform: translateX(0); }
 }
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(40px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== LAPTOP / SMALL DESKTOP ===== */
+@media (max-width: 1100px) {
+  .wine-card {
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .splash-container {
+    width: 300px;
+    height: 600px;
+  }
+
+  .bottle {
+    width: 270px;
+  }
+
+  .wine-right {
+    width: 460px;
+    min-height: 580px;
+  }
+
+  .info-box {
+    padding: 80px 38px 32px;
+  }
+
+  .wine-title {
+    font-size: 2.6rem;
+  }
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 900px) {
+  .wine-page {
+    padding: 50px 18px;
+  }
+
+  .wine-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 560px;
+  }
+
+  .wine-left,
+  .wine-right {
+    width: 100%;
+  }
+
+  .splash-container {
+    width: 280px;
+    height: 520px;
+    margin: 0 auto;
+  }
+
+  .splash {
+    width: 120%;
+    bottom: -22px;
+  }
+
+  .bottle {
+    width: 240px;
+    margin-top: 0;
+  }
+
+  .wine-right {
+    width: 100%;
+    min-height: 520px;
+    border-radius: 18px;
+  }
+
+  .info-box {
+    width: 100%;
+    padding: 60px 32px 34px;
+  }
+
+  .wine-title {
+    font-size: 2.4rem;
+  }
+
+  .story {
+    max-width: 100%;
+    font-size: 1.02rem;
+    line-height: 1.75;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .wine-page {
+    min-height: auto;
+    padding: 34px 16px 46px;
+    overflow: visible;
+  }
+
+  .wine-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    max-width: 430px;
+  }
+
+  .wine-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .splash-container {
+    width: 235px;
+    height: 420px;
+    margin: 0 auto -14px;
+  }
+
+  .splash {
+    width: 126%;
+    bottom: -8px;
+  }
+
+  .bottle {
+    width: 198px;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .wine-right {
+    width: 100%;
+    min-height: auto;
+    border-radius: 18px;
+    box-shadow: 0 24px 28px rgba(0, 0, 0, 0.12);
+  }
+
+  .info-box {
+    width: 100%;
+    height: auto;
+    padding: 34px 24px 30px;
+  }
+
+  .wine-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .wine-title::after {
+    width: 72px;
+    bottom: -10px;
+  }
+
+  .subtitle {
+    font-size: 0.78rem;
+    letter-spacing: 1.4px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+  }
+
+  .divider {
+    width: 52px;
+    margin-bottom: 12px;
+  }
+
+  .story {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 14px;
+    margin-bottom: 18px;
+  }
+
+  .details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 4px;
+    font-size: 0.88rem;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
+  .wine-page {
+    padding: 28px 14px 40px;
+  }
+
+  .wine-card {
+    max-width: 380px;
+  }
+
+  .splash-container {
+    width: 210px;
+    height: 390px;
+  }
+
+  .splash {
+    width: 132%;
+    bottom: -6px;
+  }
+
+  .bottle {
+    width: 182px;
+  }
+
+  .info-box {
+    padding: 30px 20px 26px;
+  }
+
+  .wine-title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.74rem;
+    letter-spacing: 1.2px;
+  }
+
+  .story {
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+
+  .details {
+    font-size: 0.84rem;
+  }
 }
 </style>

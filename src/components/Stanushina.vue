@@ -13,31 +13,21 @@
       <div class="wine-right fade-up">
         <div class="info-box">
           <h1 class="wine-title">Stanushina</h1>
+
           <p class="subtitle">Red Dry Wine · 2023 Vintage</p>
           <hr class="divider" />
 
-          <div class="awards">
-            <div class="award">🥇 Gold Medal — Balkan Wine Trophy 2023</div>
-            <div class="award">🏅 Regional Selection — Tikveš Wine Fair 2024</div>
-          </div>
-
           <p class="story">
-            Made from the native <strong>Stanushina grape</strong>, an ancient
-            Macedonian variety known for its rarity and authenticity.
-            <br /><br />
-            <span class="highlight">Stanushina</span> reveals aromas of red
-            currant, cherry, and pomegranate, followed by a refreshing acidity
-            and a soft, velvety texture. This elegant red wine captures the soul
-            of the <strong>Tikveš wine region</strong> — vibrant, delicate, and
-            timeless, perfectly paired with roasted meats, pasta, or aged cheese.
+            Made from the native <strong>Stanushina grape</strong>, this elegant wine
+            expresses the character of the <span class="highlight">Tikveš wine region</span>.
+            It reveals notes of red currant, cherry, and pomegranate, with a fresh,
+            soft, and refined finish.
           </p>
 
           <div class="details">
             <p><strong>Volume:</strong> 0.75 L</p>
             <p><strong>Price:</strong> €11</p>
           </div>
-
-          <button class="buy-btn">Discover More</button>
         </div>
       </div>
     </div>
@@ -47,16 +37,15 @@
 <script setup></script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
-
 .wine-page {
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  overflow: auto;
-  padding: 60px 0;
+  overflow: hidden;
+  padding: 60px 20px;
+  box-sizing: border-box;
 }
 
 /* === layout === */
@@ -70,10 +59,14 @@
 }
 
 /* === bottle side === */
+.wine-left {
+  flex: 0 0 auto;
+}
+
 .splash-container {
   position: relative;
   width: 350px;
-  height: 700px;
+  height: 680px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -91,14 +84,15 @@
 
 .bottle {
   position: relative;
-  width: 360px;
+  width: 320px;
   height: 100%;
   object-fit: contain;
   z-index: 2;
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.25));
   transition: transform 0.6s ease;
-  margin-top: -30px;
+  margin-top: -9px;
 }
+
 .bottle:hover {
   transform: scale(1.05) translateY(-5px);
 }
@@ -106,27 +100,25 @@
 /* === text side === */
 .wine-right {
   position: relative;
-  width: 520px;
-  min-height: 720px;
+  width: 500px;
+  min-height: 620px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   background: url("/images/stanushina1.jpg") center/cover no-repeat;
   border-radius: 16px;
-  overflow-y: auto; /* makes all text visible */
+  overflow: hidden;
   box-shadow: 0 50px 40px rgba(0, 0, 0, 0.15);
-  padding: 40px 0;
 }
 
-/* darken image slightly for contrast */
 .wine-right::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.55) 100%
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.68) 100%
   );
   z-index: 0;
 }
@@ -136,44 +128,50 @@
   position: relative;
   z-index: 1;
   width: 85%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  font-family: "Playfair Display", serif;
+  justify-content: flex-start;
+  padding: 100px 50px 40px;
   color: #ffffff;
   text-align: left;
+  box-sizing: border-box;
 }
 
 /* === title === */
 .wine-title {
-  font-family: "Playfair Display", serif;
-  font-size: 3.6rem;
+  position: relative;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3rem;
   font-weight: 600;
-  color: #fff3e5;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  text-transform: capitalize;
   text-shadow: 0 4px 10px rgba(210, 170, 90, 0.45),
-    0 1px 2px rgba(0, 0, 0, 0.25);
+               0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .wine-title::after {
   content: "";
-  display: block;
-  width: 100px;
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  width: 90px;
   height: 3px;
-  margin-top: 8px;
   background: linear-gradient(90deg, #b35e5e, #e08c8c);
   border-radius: 3px;
 }
 
 /* === subtitle === */
 .subtitle {
-  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1.8px;
-  color: #fce0e0;
-  margin-top: 10px;
-  margin-bottom: 15px;
+  color: #f3dddd;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 /* === divider === */
@@ -185,37 +183,21 @@
   margin-bottom: 15px;
 }
 
-/* === awards === */
-.awards {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-bottom: 20px;
-  font-size: 1rem;
-}
-.award {
-  color: #f8f8f8;
-}
-
-/* === paragraph === */
+/* === story === */
 .story {
-  background: rgba(0, 0, 0, 0.3);
-  padding: 28px 32px;
-  border-radius: 10px;
-  color: #ffffff;
-  font-family: "Playfair Display", serif;
-  font-size: 1.1rem;
-  line-height: 1.9;
-  letter-spacing: 0.4px;
-  text-align: justify;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
-  border-left: 3px solid #c47a7a;
-  margin-bottom: 30px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #f8f8f8;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  max-width: 420px;
 }
 
 .story strong {
   color: #f5e9b9;
 }
+
 .story .highlight {
   color: #ffffff;
   font-style: italic;
@@ -226,55 +208,253 @@
 .details {
   display: flex;
   justify-content: space-between;
-  font-size: 0.95rem;
+  gap: 20px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
   color: #ffffff;
-}
-
-/* === button === */
-.buy-btn {
-  font-family: "Playfair Display", serif;
-  padding: 10px 28px;
-  border: none;
-  border-radius: 30px;
-  background: linear-gradient(90deg, #b35e5e, #e08c8c);
-  color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(200, 90, 90, 0.4);
-  transition: all 0.3s ease;
-  align-self: center;
-}
-.buy-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(200, 90, 90, 0.6);
+  margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 /* === animations === */
 .fade-in {
   animation: fadeIn 1.2s ease forwards;
 }
+
 .fade-up {
   animation: fadeUp 1.4s ease forwards;
 }
+
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== LAPTOP / SMALL DESKTOP ===== */
+@media (max-width: 1100px) {
+  .wine-card {
+    gap: 3rem;
+    align-items: center;
   }
-  to {
-    opacity: 1;
-    transform: translateX(0);
+
+  .splash-container {
+    width: 300px;
+    height: 600px;
+  }
+
+  .bottle {
+    width: 270px;
+  }
+
+  .wine-right {
+    width: 460px;
+    min-height: 580px;
+  }
+
+  .info-box {
+    padding: 80px 38px 32px;
+  }
+
+  .wine-title {
+    font-size: 2.6rem;
   }
 }
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
+
+/* ===== TABLET ===== */
+@media (max-width: 900px) {
+  .wine-page {
+    padding: 50px 18px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .wine-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 560px;
+  }
+
+  .wine-left,
+  .wine-right {
+    width: 100%;
+  }
+
+  .splash-container {
+    width: 280px;
+    height: 520px;
+    margin: 0 auto;
+  }
+
+  .splash {
+    width: 120%;
+    bottom: -22px;
+  }
+
+  .bottle {
+    width: 240px;
+    margin-top: 0;
+  }
+
+  .wine-right {
+    width: 100%;
+    min-height: 520px;
+    border-radius: 18px;
+  }
+
+  .info-box {
+    width: 100%;
+    padding: 60px 32px 34px;
+  }
+
+  .wine-title {
+    font-size: 2.4rem;
+  }
+
+  .story {
+    max-width: 100%;
+    font-size: 1.02rem;
+    line-height: 1.75;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .wine-page {
+    min-height: auto;
+    padding: 34px 16px 46px;
+    overflow: visible;
+  }
+
+  .wine-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    max-width: 430px;
+  }
+
+  .wine-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .splash-container {
+    width: 235px;
+    height: 420px;
+    margin: 0 auto -14px;
+  }
+
+  .splash {
+    width: 126%;
+    bottom: -8px;
+  }
+
+  .bottle {
+    width: 198px;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .wine-right {
+    width: 100%;
+    min-height: auto;
+    border-radius: 18px;
+    box-shadow: 0 24px 28px rgba(0, 0, 0, 0.12);
+  }
+
+  .info-box {
+    width: 100%;
+    height: auto;
+    padding: 34px 24px 30px;
+  }
+
+  .wine-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .wine-title::after {
+    width: 72px;
+    bottom: -10px;
+  }
+
+  .subtitle {
+    font-size: 0.78rem;
+    letter-spacing: 1.4px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+  }
+
+  .divider {
+    width: 52px;
+    margin-bottom: 12px;
+  }
+
+  .story {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 14px;
+    margin-bottom: 18px;
+  }
+
+  .details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 4px;
+    font-size: 0.88rem;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
+  .wine-page {
+    padding: 28px 14px 40px;
+  }
+
+  .wine-card {
+    max-width: 380px;
+  }
+
+  .splash-container {
+    width: 210px;
+    height: 390px;
+  }
+
+  .splash {
+    width: 132%;
+    bottom: -6px;
+  }
+
+  .bottle {
+    width: 182px;
+  }
+
+  .info-box {
+    padding: 30px 20px 26px;
+  }
+
+  .wine-title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.74rem;
+    letter-spacing: 1.2px;
+  }
+
+  .story {
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+
+  .details {
+    font-size: 0.84rem;
   }
 }
 </style>

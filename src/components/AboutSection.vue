@@ -15,12 +15,11 @@
 
       <!-- MAIN TEXT -->
       <p class="about-text">
-       Surrounded by one of the oldest wine regions in the Balkans, our vineyards grow in the heart of Tikveš — a place shaped by warm summers, fertile soil, and generations of family knowledge.  
-<br /><br />
-We care for 15 decares of vines and cultivate Temjanika, Stanushina, Riesling, Cabernet Sauvignon, and Kardinal. Each variety carries its own aroma, its own character, and its own little story.  
-<br /><br />
-Our job is simple: to guide what nature begins and allow the fruit to become wine in its own rhythm. What starts under the sun, between rows scented with earth and ripe grapes, finds its true form in our family cellar.
-
+        Surrounded by one of the oldest wine regions in the Balkans, our vineyards grow in the heart of Tikveš — a place shaped by warm summers, fertile soil, and generations of family knowledge.
+        <br /><br />
+        We care for 15 decares of vines and cultivate Temjanika, Stanushina, Riesling, Cabernet Sauvignon, and Kardinal. Each variety carries its own aroma, its own character, and its own little story.
+        <br /><br />
+        Our job is simple: to guide what nature begins and allow the fruit to become wine in its own rhythm. What starts under the sun, between rows scented with earth and ripe grapes, finds its true form in our family cellar.
       </p>
 
       <!-- ===================== HARVEST SECTION ===================== -->
@@ -32,7 +31,7 @@ Our job is simple: to guide what nature begins and allow the fruit to become win
         <div class="about-content-inner">
           <div class="about-text-harvest">
             <p>
-             During harvest from August until October, we pick every variety separately because the sugar in the grapes decides everything later.
+              During harvest from August until October, we pick every variety separately because the sugar in the grapes decides everything later.
             </p>
 
             <p>
@@ -40,7 +39,7 @@ Our job is simple: to guide what nature begins and allow the fruit to become win
             </p>
 
             <p>
-               When the grapes are ready, we collect them in crates and bring them straight to the winery. There, we crush them and transfer everything into the press so we can get the clean grape juice "must".After that, the juice goes into barrels. We leave it to rest for a few days, and slowly the fermentation starts on its own. 
+              When the grapes are ready, we collect them in crates and bring them straight to the winery. There, we crush them and transfer everything into the press so we can get the clean grape juice "must". After that, the juice goes into barrels. We leave it to rest for a few days, and slowly the fermentation starts on its own.
             </p>
           </div>
 
@@ -68,11 +67,6 @@ Our job is simple: to guide what nature begins and allow the fruit to become win
           <p class="description">Traditional, rustic and full of heritage.</p>
         </div>
 
-        <!-- CENTER — LOGO (150px) -->
-        <div class="logo-center simple-center">
-          <img src="/images/cellarLogo.png" class="cellar-logo" alt="Cellar Logo" />
-        </div>
-
         <!-- Right: Vinarija Klincharov -->
         <div
           class="choice elegant-choice cellar"
@@ -87,7 +81,6 @@ Our job is simple: to guide what nature begins and allow the fruit to become win
 
       </div>
 
-
       <!-- ===================== ETNO / VINARIJA INFO SECTION ===================== -->
       <transition name="fade">
         <div v-if="selectedCellar" class="cellar-info-section">
@@ -98,18 +91,17 @@ Our job is simple: to guide what nature begins and allow the fruit to become win
             <div class="about-text-harvest">
               <h2 class="harvest-title cellar-title">Etno Podrum</h2>
               <div class="harvest-underline cellar-underline"></div>
-<p>
-  Our Etno Podrum is a small, rustic space filled with traditional tools and objects my grandfather collected over many years. Nothing inside is modern — everything carries the spirit of how things were done in the old days.
-</p>
+              <p>
+                Our Etno Podrum is a small, rustic space filled with traditional tools and objects my grandfather collected over many years. Nothing inside is modern — everything carries the spirit of how things were done in the old days.
+              </p>
 
-<p>
-  Here we also keep our homemade rakija, stored in old wooden barrels that are more than 20 years old. The barrels, the smell of the wood, and the quiet atmosphere make this place feel untouched by time.
-</p>
+              <p>
+                Here we also keep our homemade rakija, stored in old wooden barrels that are more than 20 years old. The barrels, the smell of the wood, and the quiet atmosphere make this place feel untouched by time.
+              </p>
 
-<p>
-  Visitors are always curious to see this part of our home, especially foreigners. They love discovering the tradition and the story behind each object.
-</p>
-
+              <p>
+                Visitors are always curious to see this part of our home, especially foreigners. They love discovering the tradition and the story behind each object.
+              </p>
             </div>
 
             <div class="about-slider cellar-slider">
@@ -127,18 +119,17 @@ Our job is simple: to guide what nature begins and allow the fruit to become win
               <h2 class="harvest-title cellar-title">Vinarija Klincharov</h2>
               <div class="harvest-underline cellar-underline"></div>
 
-             <p>
-  Our modern winery is the place where all our wines are stored and carefully monitored. Inside, we keep them in stainless-steel tanks and temperature-controlled refrigerators to preserve their freshness and natural aroma.
-</p>
+              <p>
+                Our modern winery is the place where all our wines are stored and carefully monitored. Inside, we keep them in stainless-steel tanks and temperature-controlled refrigerators to preserve their freshness and natural aroma.
+              </p>
 
-<p>
-  Visitors can also see our many awards, as well as the equipment we use throughout the production process — from fermentation to cooling. People often enjoy getting a closer look at how everything functions behind the scenes.
-</p>
+              <p>
+                Visitors can also see our many awards, as well as the equipment we use throughout the production process — from fermentation to cooling. People often enjoy getting a closer look at how everything functions behind the scenes.
+              </p>
 
-<p>
-  Every tour through the winery includes a guided explanation and a tasting. Guests hear the story behind each wine while enjoying the flavors in a relaxed and welcoming atmosphere.
-</p>
-
+              <p>
+                Every tour through the winery includes a guided explanation and a tasting. Guests hear the story behind each wine while enjoying the flavors in a relaxed and welcoming atmosphere.
+              </p>
             </div>
 
             <div class="about-slider cellar-slider">
@@ -156,9 +147,6 @@ Our job is simple: to guide what nature begins and allow the fruit to become win
 
   </section>
 </template>
-
-
-
 
 <script setup>
 import { ref } from "vue"
@@ -207,10 +195,6 @@ const vinIndex = ref(0)
 const nextVin = () => vinIndex.value = (vinIndex.value + 1) % vinImages.value.length
 const prevVin = () => vinIndex.value = (vinIndex.value - 1 + vinImages.value.length) % vinImages.value.length
 </script>
-
-
-
-
 
 <style scoped>
 /* ================= HERO ================= */
@@ -419,31 +403,13 @@ const prevVin = () => vinIndex.value = (vinIndex.value - 1 + vinImages.value.len
   opacity: 0.75;
   transition: opacity 0.3s ease, color 0.3s ease;
 }
-
+  
 .choice.elegant-choice:hover h2 {
   color: #1a1714;
 }
 .choice.elegant-choice:hover .description {
   opacity: 1;
   color: #4d4339;
-}
-
-/* ---------- CENTER LOGO BLOCK (150px) ---------- */
-.simple-center {
-  width: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cellar-logo {
-  width: 150px;
-  opacity: 0.9;
-  transition: opacity 0.3s ease;
-}
-
-.cellar-logo:hover {
-  opacity: 1;
 }
 
 /* ===================== TRANSITION FOR <transition name="fade"> ===================== */
@@ -457,7 +423,6 @@ const prevVin = () => vinIndex.value = (vinIndex.value - 1 + vinImages.value.len
 }
 
 /* ===================== ETNO / VINARIJA INFO SECTION ===================== */
-/* MAIN WRAPPER – glass + shadow */
 .cellar-info-section {
   margin-top: 80px;
   padding: 55px 50px;
@@ -578,29 +543,24 @@ const prevVin = () => vinIndex.value = (vinIndex.value - 1 + vinImages.value.len
   from { opacity: 0; transform: translateX(25px); }
   to   { opacity: 1; transform: translateX(0); }
 }
-/* === FINAL PERFECT HEIGHT ALIGNMENT FIX === */
 
-/* Force both columns to share equal height */
+/* === FINAL PERFECT HEIGHT ALIGNMENT FIX === */
 .cellar-layout {
   align-items: stretch !important;
 }
 
-/* Text block must match slider height */
 .cellar-layout .about-text-harvest {
-  min-height: 450px !important; /* SAME as slider */
+  min-height: 450px !important;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;   /* keep title + text at top */
+  justify-content: flex-start;
 }
 
-/* Slider stays fixed height */
 .cellar-slider {
   height: 450px !important;
 }
 
 /* ===================== HARVEST LUXURY STYLE (MATCH CELLARS) ===================== */
-
-/* Wrap harvest content into luxury gold frame */
 .harvest-section .about-content-inner {
   padding: 40px 35px;
   background: linear-gradient(
@@ -613,7 +573,7 @@ const prevVin = () => vinIndex.value = (vinIndex.value - 1 + vinImages.value.len
   box-shadow: 0 22px 45px rgba(0, 0, 0, 0.18);
   backdrop-filter: blur(12px);
   animation: fadeUp 0.7s ease-out;
-  align-items: stretch !important; /* match heights */
+  align-items: stretch !important;
 }
 
 /* Luxury HARVEST TITLE */
@@ -624,7 +584,7 @@ const prevVin = () => vinIndex.value = (vinIndex.value - 1 + vinImages.value.len
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #2a231c !important;
-  margin-top: 140px; 
+  margin-top: 140px;
   margin-bottom: 14px;
 }
 
@@ -641,7 +601,7 @@ const prevVin = () => vinIndex.value = (vinIndex.value - 1 + vinImages.value.len
 /* LEFT TEXT BOX gold frame identical to cellar */
 .harvest-section .about-text-harvest {
   width: 450px;
-  min-height: 420px !important; /* SAME as slider */
+  min-height: 420px !important;
   background: rgba(255, 255, 255, 0.65);
   border: 2px solid rgba(198, 155, 102, 0.45);
   border-radius: 20px;
@@ -696,4 +656,283 @@ const prevVin = () => vinIndex.value = (vinIndex.value - 1 + vinImages.value.len
   background: rgba(255, 255, 255, 0.9);
 }
 
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  .hero-block {
+    height: 48vh;
+  }
+
+  .hero-frame {
+    bottom: -220px;
+    width: 88%;
+  }
+
+  .hero-block::after {
+    bottom: -240px;
+    height: 70px;
+  }
+
+  .about-content {
+    padding-top: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .about-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .about-text {
+    max-width: 760px;
+    font-size: 17px;
+    line-height: 1.75;
+    margin-bottom: 50px;
+  }
+
+  .harvest-section .harvest-title {
+    font-size: 34px !important;
+    margin-top: 120px;
+  }
+
+  .harvest-section .about-content-inner,
+  .cellar-layout {
+    gap: 28px;
+  }
+
+  .harvest-section .about-text-harvest,
+  .harvest-section .about-slider,
+  .cellar-layout .about-text-harvest,
+  .cellar-slider {
+    width: 100% !important;
+    max-width: 480px;
+  }
+
+  .harvest-section .about-text-harvest {
+    min-height: 380px !important;
+    padding: 26px;
+  }
+
+  .harvest-section .about-slider {
+    height: 380px !important;
+  }
+
+  .cellar-layout .about-text-harvest {
+    min-height: 400px !important;
+    padding: 26px;
+  }
+
+  .cellar-slider {
+    height: 400px !important;
+  }
+
+  .cellar-choices {
+    gap: 30px;
+    margin-top: 200px !important;
+  }
+
+  .choice.elegant-choice,
+  .choice-square {
+    width: 300px;
+  }
+
+  .choice h2 {
+    font-size: 24px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .hero-block {
+    height: 40vh;
+  }
+
+  .hero-frame {
+    bottom: -120px;
+    width: 92%;
+  }
+
+  .hero-block::after {
+    bottom: -140px;
+    height: 50px;
+  }
+
+  .about-content {
+    padding-top: 30px;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-bottom: 60px;
+  }
+
+  .about-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .about-text {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+
+  .harvest-section .harvest-title {
+    font-size: 28px !important;
+    margin-top: 85px;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+  }
+
+  .harvest-section .harvest-underline {
+    width: 120px;
+    margin-bottom: 24px !important;
+  }
+
+  .harvest-section .about-content-inner,
+  .cellar-layout {
+    flex-direction: column;
+    gap: 20px;
+    padding: 22px 16px;
+    align-items: center !important;
+  }
+
+  .harvest-section .about-text-harvest,
+  .harvest-section .about-slider,
+  .cellar-layout .about-text-harvest,
+  .cellar-slider {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .harvest-section .about-text-harvest {
+    min-height: auto !important;
+    padding: 20px 16px;
+  }
+
+  .harvest-section .about-text-harvest p {
+    font-size: 15px !important;
+    line-height: 1.65;
+  }
+
+  .harvest-section .about-slider {
+    height: 300px !important;
+  }
+
+  .cellar-choices {
+    flex-direction: column;
+    gap: 26px;
+    margin-top: 140px !important;
+    margin-bottom: 50px;
+  }
+
+  .choice.elegant-choice,
+  .choice-square {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .choice h2 {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .cellar-info-section {
+    margin-top: 50px;
+    padding: 22px 16px;
+  }
+
+  .cellar-title {
+    font-size: 28px !important;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .cellar-underline {
+    width: 120px;
+    margin-bottom: 22px !important;
+  }
+
+  .cellar-layout .about-text-harvest {
+    min-height: auto !important;
+    padding: 20px 16px;
+  }
+
+  .cellar-layout .about-text-harvest p {
+    font-size: 15px !important;
+    line-height: 1.65;
+  }
+
+  .cellar-slider {
+    height: 300px !important;
+  }
+
+  .arrow {
+    font-size: 22px;
+    padding: 5px 10px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  .hero-block {
+    height: 34vh;
+  }
+
+  .hero-frame {
+    bottom: -90px;
+    width: 94%;
+  }
+
+  .hero-block::after {
+    bottom: -105px;
+    height: 40px;
+  }
+
+  .about-content {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 22px;
+  }
+
+  .about-title {
+    font-size: 23px;
+  }
+
+  .about-text {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .harvest-section .harvest-title {
+    font-size: 22px !important;
+    margin-top: 70px;
+    letter-spacing: 1.5px;
+  }
+
+  .harvest-section .about-slider,
+  .cellar-slider {
+    height: 260px !important;
+  }
+
+  .cellar-title {
+    font-size: 22px !important;
+    letter-spacing: 1.5px;
+  }
+
+  .choice.elegant-choice,
+  .choice-square {
+    max-width: 280px;
+  }
+
+  .choice h2 {
+    font-size: 20px;
+  }
+
+  .arrow {
+    font-size: 20px;
+    padding: 4px 9px;
+  }
+}
 </style>

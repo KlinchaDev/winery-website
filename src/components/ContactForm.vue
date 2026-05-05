@@ -27,19 +27,20 @@
             <span class="detail-title">Email</span>
             <p>aceklincarov@gmail.com</p>
           </div>
-        </div>
 
-         <div class="detail-item">
-    <span class="detail-title">Instagram</span>
-    <p>
-      <a 
-        href="https://www.instagram.com/klincharov_family_winery/" 
-        target="_blank"
-      >
-        @klincharov_family_winery
-      </a>
-    </p>
-  </div>
+          <div class="detail-item">
+            <span class="detail-title">Instagram</span>
+            <p>
+              <a
+                href="https://www.instagram.com/klincharov_family_winery/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @klincharov_family_winery
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
 
       <!-- RIGHT SIDE -->
@@ -156,6 +157,16 @@
   color: #2e2e2e;
 }
 
+.detail-item a {
+  color: #2e2e2e;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.detail-item a:hover {
+  color: #9f7b4f;
+}
+
 /* RIGHT SIDE */
 .contact-card {
   background: rgba(255, 255, 255, 0.78);
@@ -198,6 +209,11 @@
   border-color: #b08a57;
   box-shadow: 0 0 0 4px rgba(176, 138, 87, 0.12);
   transform: translateY(-1px);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 140px;
 }
 
 /* BUTTON */
@@ -285,34 +301,137 @@
   .contact-title {
     font-size: 3.2rem;
   }
+
+  .contact-info {
+    max-width: 760px;
+  }
 }
 
 @media (max-width: 768px) {
   .contact-section {
-    padding: 120px 20px 70px;
+    min-height: auto;
+    padding: 110px 16px 60px;
   }
 
-  .contact-card {
-    padding: 20px;
-    border-radius: 22px;
+  .contact-wrapper {
+    gap: 1.8rem;
+  }
+
+  .contact-info {
+    text-align: left;
   }
 
   .contact-title {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
+    line-height: 1.05;
+  }
+
+  .title-line {
+    width: 72px;
+    margin: 16px 0 22px;
+  }
+
+  .contact-label {
+    font-size: 0.72rem;
+    letter-spacing: 2.2px;
+    margin-bottom: 8px;
   }
 
   .contact-text {
-    font-size: 1.15rem;
+    font-size: 1.08rem;
+    line-height: 1.65;
+    margin-bottom: 24px;
+    max-width: 100%;
   }
 
-  .map-box iframe {
-    height: 260px;
+  .contact-details {
+    gap: 16px;
+  }
+
+  .detail-item {
+    padding-left: 14px;
+  }
+
+  .detail-title {
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
+  }
+
+  .detail-item p {
+    font-size: 1rem;
+    line-height: 1.45;
+    word-break: break-word;
+  }
+
+  .contact-card {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .contact-form {
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 14px 15px;
+    font-size: 0.95rem;
+    border-radius: 14px;
+  }
+
+  .contact-form textarea {
+    min-height: 120px;
   }
 
   .send-btn {
     width: 100%;
+    display: flex;
     justify-content: center;
     text-align: center;
+    padding: 14px 18px;
+    font-size: 0.88rem;
+  }
+
+  .map-box {
+    border-radius: 18px;
+  }
+
+  .map-box iframe {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 100px 14px 48px;
+  }
+
+  .contact-title {
+    font-size: 2.15rem;
+  }
+
+  .contact-text {
+    font-size: 1rem;
+  }
+
+  .detail-item p {
+    font-size: 0.96rem;
+  }
+
+  .contact-card {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.92rem;
+  }
+
+  .map-box iframe {
+    height: 220px;
   }
 }
 </style>
